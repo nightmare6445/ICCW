@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APEX WA — Join</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="nav">
+  <a href="index.html" class="logo">APEX<span>WA</span></a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="roster.html">Roster</a>
+    <a href="shows.html">Shows</a>
+    <a href="titles.html">Titles</a>
+    <a href="join.html" class="active">Join</a>
+  </nav>
+  <a href="join.html" class="nav-cta">Sign Up</a>
+  <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</header>
+
+<section class="page-header">
+  <span class="eyebrow">Open Tryouts</span>
+  <h1>JOIN THE <span>FED</span></h1>
+  <p>Create your character below. Once submitted, a booker will review and welcome you to the locker room.</p>
+</section>
+
+<div class="join-wrap">
+  <form id="joinForm" onsubmit="return handleJoin(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Handler Name</label>
+        <input type="text" name="handler" placeholder="Your username / OOC name" required>
+      </div>
+      <div class="form-group">
+        <label>Contact (Discord / Email)</label>
+        <input type="text" name="contact" placeholder="how we reach you" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Wrestler Name</label>
+      <input type="text" name="wrestler" placeholder="Your character's ring name" required>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Alignment</label>
+        <select name="alignment" required>
+          <option value="">Choose...</option>
+          <option>Face (Hero)</option>
+          <option>Heel (Villain)</option>
+          <option>Tweener (In Between)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Style</label>
+        <select name="style" required>
+          <option value="">Choose...</option>
+          <option>High-Flyer</option>
+          <option>Powerhouse</option>
+          <option>Technician</option>
+          <option>Brawler</option>
+          <option>All-Rounder</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Gimmick & Backstory</label>
+      <textarea name="bio" placeholder="Tell us who your character is — their personality, look, and what makes them stand out." required></textarea>
+      <p class="form-note">Tip: the more vivid the character, the easier it is to book you into great storylines.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Signature & Finishing Moves</label>
+      <input type="text" name="moves" placeholder="e.g. Springboard Cutter (signature), Apex Driver (finisher)">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Application →</button>
+    <div class="form-success" id="success">★ Application received! A booker will be in touch soon. ★</div>
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="footer-logo">APEX<span>WA</span></div>
+  <p>Apex Wrestling Alliance is a fictional e-fed for creative roleplay. All characters are original works of their creators.</p>
+  <div class="footer-links"><a href="roster.html">Roster</a><a href="shows.html">Shows</a><a href="titles.html">Titles</a><a href="join.html">Join</a></div>
+  <p class="copyright">© 2026 APEX Wrestling Alliance · An e-fed community</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
