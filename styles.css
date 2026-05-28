@@ -64,7 +64,7 @@ em{font-style:normal;color:var(--red)}
   background-image:repeating-linear-gradient(90deg,transparent,transparent 78px,rgba(255,255,255,.02) 78px,rgba(255,255,255,.02) 79px);
 }
 .hero-stripe{
-  position:absolute;top:42%;left:-10%;width:120%;
+  position:absolute;top:72%;left:-10%;width:120%;
   transform:rotate(-4deg);
   background:var(--red);color:#fff;
   font-family:'Anton',sans-serif;font-size:1rem;letter-spacing:4px;
